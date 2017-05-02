@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[Openwrt DNS解析问题]]></title>
+      <title><![CDATA[Openwrt 使用上层DNS解析问题]]></title>
       <url>/2017/05/02/kejiso/DNS/</url>
       <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. rm /etc/resolv.conf</div><div class="line">2. ln -s /tmp/resolv.conf.auto /etc/resolv.conf</div></pre></td></tr></table></figure>
 <p>这样就能使用上层的DNS来解析了</p>
