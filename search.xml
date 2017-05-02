@@ -3,6 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[Openwrt DNS解析问题]]></title>
+      <url>/2017/05/02/kejiso/DNS/</url>
+      <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. rm /etc/resolv.conf</div><div class="line">2. ln -s /tmp/resolv.conf.auto /etc/resolv.conf</div></pre></td></tr></table></figure>
+<p>这样就能使用上层的DNS来解析了</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[gengetopt编译失败问题]]></title>
       <url>/2017/05/02/gengetopt/</url>
       <content type="html"><![CDATA[<h1 id="gengetopt编译失败问题"><a href="#gengetopt编译失败问题" class="headerlink" title="gengetopt编译失败问题"></a>gengetopt编译失败问题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">make[9]: *** [c_source.lo] Error 1</div><div class="line">make[9]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer/build_dir/host/gengetopt-2.22.6/src/skels&apos;</div><div class="line">make[8]: *** [all] Error 2</div><div class="line">make[8]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer/build_dir/host/gengetopt-2.22.6/src/skels&apos;</div><div class="line">make[7]: *** [all-recursive] Error 1</div><div class="line">make[7]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer/build_dir/host/gengetopt-2.22.6/src&apos;</div><div class="line">make[6]: *** [all] Error 2</div><div class="line">make[6]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer/build_dir/host/gengetopt-2.22.6/src&apos;</div><div class="line">make[5]: *** [all-recursive] Error 1</div><div class="line">make[5]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer/build_dir/host/gengetopt-2.22.6&apos;</div><div class="line">make[4]: *** [all] Error 2</div><div class="line">make[4]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer/build_dir/host/gengetopt-2.22.6&apos;</div><div class="line">make[3]: *** [/home/panyao/work/openwrt/chaos_calmer/build_dir/host/gengetopt-2.22.6/.built] Error 2</div><div class="line">make[3]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer/tools/gengetopt&apos;</div><div class="line">make[2]: *** [tools/gengetopt/compile] Error 2</div><div class="line">make[2]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer&apos;</div><div class="line">make[1]: *** [/home/panyao/work/openwrt/chaos_calmer/staging_dir/target-mips_34kc_uClibc-0.9.33.2/stamp/.tools_install_yynyyynynynyyyyyyyyyyyyyyyyyyynyyyyynnyyynyyynnnyy] Error 2</div><div class="line">make[1]: Leaving directory `/home/panyao/work/openwrt/chaos_calmer&apos;</div><div class="line">make: *** [world] Error 2</div></pre></td></tr></table></figure>
