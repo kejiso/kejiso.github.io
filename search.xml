@@ -5,7 +5,8 @@
     <entry>
       <title><![CDATA[My New Post]]></title>
       <url>/2017/05/02/My-New-Post/</url>
-      <content type="html"><![CDATA[<h2 id="123"><a href="#123" class="headerlink" title="123"></a>123</h2>]]></content>
+      <content type="html"><![CDATA[<h2 id="123"><a href="#123" class="headerlink" title="123"></a>123</h2><p>this is a test</p>
+]]></content>
       
         
     </entry>
