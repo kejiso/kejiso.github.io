@@ -122,11 +122,11 @@ html {
 }
 body {
   font-family: "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
-  background: #fff;
+  background: #0e0e0e;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
-  color: #333;
+  color: #0e0e0e;
   -webkit-overflow-scrolling: touch;
 }
 ::selection {
