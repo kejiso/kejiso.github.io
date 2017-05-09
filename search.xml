@@ -3,6 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[Openwrt编译出错]]></title>
+      <url>/2017/05/09/FORCE_UNSAFE_CONFIGURE=1/</url>
+      <content type="html"><![CDATA[<p><code>checking whether mknod can create fifo without rootprivileges… configure: error: in &#39;/home/openwrt/build_dir/host/tar-1.28′</code>:<br><code>configure: error: you should not run configure as root(set FORCE_UNSAFE_CONFIGURE=1 in environment to bypass this check)</code><br><code>See &#39;config.log&#39; for more details</code></p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p><code>Export  FORCE_UNSAFE_CONFIGURE=1</code></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Openwrt 使用上层DNS解析问题]]></title>
       <url>/2017/05/02/DNS/</url>
       <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. rm /etc/resolv.conf</div><div class="line">2. ln -s /tmp/resolv.conf.auto /etc/resolv.conf</div></pre></td></tr></table></figure>
