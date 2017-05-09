@@ -3,6 +3,15 @@
   
     
     <entry>
+      <title><![CDATA[vsftp正常登录，无法列出文件目录]]></title>
+      <url>/2017/05/09/vsftpd/</url>
+      <content type="html"><![CDATA[<p>iptables里面仅仅开放了80、21等常用端口，这样就导致了vsFTPd在被动模式时无法使用随机端口，从而造成了客户端连接FTP时无法列出目录这样的问题。解决方式很简单，给vsFTPd增加随机端口的范围，然后把这个端口范围添加到iptables。<br>具体做法如下：<br>1、修改/etc/vsftpd/vsftpd.conf的配置文件，在文件末端添加：<br>    pasv_max_port=6666<br>    pasv_min_port=5555<br>    /etc/init.d/vsftpd restart<br>2、添加一条防火墙规则<br>    /etc/init.d/iptables stop<br>    iptables -I INPUT -p tcp –dport 5555:6666 -j ACCEPT<br>    /etc/init.d/iptables save<br>    /etc/init.d/iptables start<br>最后再次进行ftp连接，成功。</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Openwrt配置Oray花生壳动态域名服务]]></title>
       <url>/2017/05/09/oray.net/</url>
       <content type="html"><![CDATA[<p>直接编辑 /usr/lib/ddns下面的services文件, 里面增加一条就可以在DDNS Luci菜单里面找到Oray服务器, 下面的语句增加到services文件最后面</p>

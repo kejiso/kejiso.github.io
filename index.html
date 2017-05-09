@@ -202,6 +202,62 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-vsftpd" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/09/vsftpd/" class="article-date">
+      <time datetime="2017-05-09T07:47:35.111Z" itemprop="datePublished">2017-05-09</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/09/vsftpd/">vsftp正常登录，无法列出文件目录</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>iptables里面仅仅开放了80、21等常用端口，这样就导致了vsFTPd在被动模式时无法使用随机端口，从而造成了客户端连接FTP时无法列出目录这样的问题。解决方式很简单，给vsFTPd增加随机端口的范围，然后把这个端口范围添加到iptables。<br>具体做法如下：<br>1、修改/etc/vsftpd/vsftpd.conf的配置文件，在文件末端添加：<br>    pasv_max_port=6666<br>    pasv_min_port=5555<br>    /etc/init.d/vsftpd restart<br>2、添加一条防火墙规则<br>    /etc/init.d/iptables stop<br>    iptables -I INPUT -p tcp –dport 5555:6666 -j ACCEPT<br>    /etc/init.d/iptables save<br>    /etc/init.d/iptables start<br>最后再次进行ftp连接，成功。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-oray.net" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
