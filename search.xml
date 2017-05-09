@@ -3,6 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[Openwrt配置Oray花生壳动态域名服务]]></title>
+      <url>/2017/05/09/oray.net/</url>
+      <content type="html"><![CDATA[<p>直接编辑 /usr/lib/ddns下面的services文件, 里面增加一条就可以在DDNS Luci菜单里面找到Oray服务器, 下面的语句增加到services文件最后面</p>
+<p># oray.net<br>“oray.net” “<a href="http://[USERNAME]:[PASSWORD]@ddns.oray.com:80/ph/update?hostname=[DOMAIN]&amp;myip=[IP]”" target="_blank" rel="external">http://[USERNAME]:[PASSWORD]@ddns.oray.com:80/ph/update?hostname=[DOMAIN]&amp;myip=[IP]”</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Openwrt编译出错]]></title>
       <url>/2017/05/09/FORCE_UNSAFE_CONFIGURE=1/</url>
       <content type="html"><![CDATA[<p><code>checking whether mknod can create fifo without rootprivileges… configure: error: in &#39;/home/openwrt/build_dir/host/tar-1.28′</code>:<br><code>configure: error: you should not run configure as root(set FORCE_UNSAFE_CONFIGURE=1 in environment to bypass this check)</code><br><code>See &#39;config.log&#39; for more details</code></p>

@@ -202,6 +202,63 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-oray.net" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/09/oray.net/" class="article-date">
+      <time datetime="2017-05-09T07:42:41.099Z" itemprop="datePublished">2017-05-09</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/09/oray.net/">Openwrt配置Oray花生壳动态域名服务</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>直接编辑 /usr/lib/ddns下面的services文件, 里面增加一条就可以在DDNS Luci菜单里面找到Oray服务器, 下面的语句增加到services文件最后面</p>
+<p># oray.net<br>“oray.net” “<a href="http://[USERNAME]:[PASSWORD]@ddns.oray.com:80/ph/update?hostname=[DOMAIN]&amp;myip=[IP]”" target="_blank" rel="external">http://[USERNAME]:[PASSWORD]@ddns.oray.com:80/ph/update?hostname=[DOMAIN]&amp;myip=[IP]”</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-FORCE_UNSAFE_CONFIGURE=1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
